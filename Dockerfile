@@ -21,4 +21,4 @@ RUN mvn install:install-file -Dfile=./lib/opencv-3410.jar -DgroupId=org.opencv  
 RUN mvn package
 EXPOSE 8080
 
-#RUN java -D java.library.path=lib/ -jar target/fatjar-0.0.1-SNAPSHOT.jar
+CMD ["java", "-Djava.library.path=lib/", "-jar", "target/fatjar-0.0.1-SNAPSHOT.jar"]
